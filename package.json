@@ -1,0 +1,51 @@
+{
+	"name": "trombase",
+	"version": "0.0.0",
+	"description": "A simple backend for serverside JavaScript with PostgreSQL, schema DSL, and permission-checked DB access.",
+	"homepage": "https://github.com/mofax/trombase#readme",
+	"bugs": {
+		"url": "https://github.com/mofax/trombase/issues"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mofax/trombase.git"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"types": "./dist/main.d.mts",
+	"exports": {
+		".": {
+			"types": "./dist/main.d.mts",
+			"import": "./dist/main.mjs"
+		},
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "vp pack",
+		"prepublishOnly": "bun run build",
+		"fmt": "oxfmt"
+	},
+	"dependencies": {
+		"postgres": "^3.4.9"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"@types/qs": "^6.15.1",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"bun-types": "^1.3.13",
+		"qs": "^6.15.2",
+		"react": "^19.2.6",
+		"react-dom": "^19.2.6",
+		"vite-plus": "^0.1.22"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"types": ["bun", "qs"]
+	},
+	"include": ["./server.ts", "./schema.ts"]
+}
